@@ -6,7 +6,7 @@ export TOPDIR=`pwd`
 export PATH=`pegasus-config --bin`:$PATH
 
 KEG_PATH=`which pegasus-keg`
-KEG_CHKSUM=`sha256sum $KEG_PATH`
+KEG_CHKSUM=`pegasus-integrity --generate-sha256=$KEG_PATH`
 
 # generate the dax
 export PYTHONPATH=`pegasus-config --python`
